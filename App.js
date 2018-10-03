@@ -34,6 +34,12 @@ export default class CameraScreen extends React.Component {
     showGallery: false,
     photos: [],
     faces: [],
+    recordOptions: {
+      mute: false,
+      maxDuration: 5,
+      quality: RNCamera.Constants.VideoQuality["288p"],
+    },
+    isRecording: false
   };
 
   getRatios = async function() {
@@ -102,6 +108,23 @@ export default class CameraScreen extends React.Component {
       });
     }
   };
+
+  takeVideo = async function() {
+    if (this.camera) {
+      try {
+        const promise = this.camera.recordAsync(this.state.recordOptions);
+
+        if (promise) {
+          this.setState({ isRecording: true });
+          const data = await promise;
+          this.setState({ isRecording: false });
+          console.warn(data);
+        }
+      } catch (e) {
+        console.warn(e);
+      }
+    }
+  }
 
   onFacesDetected = ({ faces }) => this.setState({ faces });
   onFaceDetectionError = state => console.warn('Faces detection error:', state);
@@ -231,6 +254,30 @@ export default class CameraScreen extends React.Component {
             step={0.1}
             disabled={this.state.autoFocus === 'on'}
           />
+        </View>
+        <View
+          style={{
+            flex: 0.1,
+            backgroundColor: 'transparent',
+            flexDirection: 'row',
+            alignSelf: 'flex-end',
+          }}
+        >
+          <TouchableOpacity
+            style={[styles.flipButton, { 
+              flex: 0.3, 
+              alignSelf: 'flex-end',
+              backgroundColor: this.state.isRecording ? 'white' : 'darkred',
+            }]}
+            onPress={this.state.isRecording ? () => {} : this.takeVideo.bind(this)}
+          >
+            {
+              this.state.isRecording ?
+              <Text style={styles.flipText}> ☕ </Text>
+              :
+              <Text style={styles.flipText}> REC </Text>
+            }
+          </TouchableOpacity>
         </View>
         <View
           style={{
