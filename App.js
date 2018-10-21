@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Slider } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, TouchableOpacity, Slider } from 'react-native';
 import { RNCamera } from 'react-native-camera';
 
 const landmarkSize = 2;
@@ -22,11 +22,11 @@ const wbOrder = {
 
 export default class CameraScreen extends React.Component {
   state = {
-    flash: 'off',
+    flash: RNCamera.Constants.FlashMode.off,
     zoom: 0,
-    autoFocus: 'on',
+    autoFocus: RNCamera.Constants.AutoFocus.on,
     depth: 0,
-    type: 'back',
+    type: RNCamera.Constants.Type.back,
     whiteBalance: 'auto',
     ratio: '16:9',
     ratios: [],
@@ -34,6 +34,9 @@ export default class CameraScreen extends React.Component {
     showGallery: false,
     photos: [],
     faces: [],
+    textBlocks: [],
+    faceDetectorEnabled: false,
+    textRecognizerEnabled: false,
     recordOptions: {
       mute: false,
       maxDuration: 5,
@@ -53,9 +56,21 @@ export default class CameraScreen extends React.Component {
     });
   }
 
+  toggleFaceDetecting() {
+    this.setState({
+      faceDetectorEnabled: !this.state.faceDetectorEnabled,
+    });
+  }
+
+  toggleTextDetecting() {
+    this.setState({
+      textRecognizerEnabled: !this.state.textRecognizerEnabled,
+    });
+  }
+
   toggleFacing() {
     this.setState({
-      type: this.state.type === 'back' ? 'front' : 'back',
+      type: this.state.type === RNCamera.Constants.Type.back ? RNCamera.Constants.Type.front : RNCamera.Constants.Type.back,
     });
   }
 
@@ -79,7 +94,8 @@ export default class CameraScreen extends React.Component {
 
   toggleFocus() {
     this.setState({
-      autoFocus: this.state.autoFocus === 'on' ? 'off' : 'on',
+      autoFocus: this.state.autoFocus === RNCamera.Constants.AutoFocus.on ? 
+        RNCamera.Constants.AutoFocus.off : RNCamera.Constants.AutoFocus.on,
     });
   }
 
@@ -126,6 +142,8 @@ export default class CameraScreen extends React.Component {
     }
   }
 
+  onTextRecognized = ({ textBlocks }) => this.setState({ textBlocks });
+
   onFacesDetected = ({ faces }) => this.setState({ faces });
   onFaceDetectionError = state => console.warn('Faces detection error:', state);
 
@@ -151,6 +169,12 @@ export default class CameraScreen extends React.Component {
         <Text style={styles.faceText}>rollAngle: {rollAngle.toFixed(0)}</Text>
         <Text style={styles.faceText}>yawAngle: {yawAngle.toFixed(0)}</Text>
       </View>
+    );
+  }
+
+  renderText({ value }) {
+    return (
+      <Text style={styles.textBlocksText}>{value}</Text>
     );
   }
 
@@ -192,6 +216,14 @@ export default class CameraScreen extends React.Component {
     );
   }
 
+  renderTextBlocks() {
+    return (
+      <View style={styles.textContainer} pointerEvents="none">
+        {this.state.textBlocks.map(this.renderText)}
+      </View>
+    );
+  }
+
   renderLandmarks() {
     return (
       <View style={styles.facesContainer} pointerEvents="none">
@@ -202,6 +234,7 @@ export default class CameraScreen extends React.Component {
 
   renderCamera() {
     return (
+    <SafeAreaView style={{ flex: 1 }}>
       <RNCamera
         ref={ref => {
           this.camera = ref;
@@ -216,11 +249,12 @@ export default class CameraScreen extends React.Component {
         whiteBalance={this.state.whiteBalance}
         ratio={this.state.ratio}
         faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks.all}
-        onFacesDetected={this.onFacesDetected}
+        onFacesDetected={this.state.faceDetectorEnabled ? this.onFacesDetected : null}
         onFaceDetectionError={this.onFaceDetectionError}
         focusDepth={this.state.depth}
         permissionDialogTitle={'Permission to use camera'}
         permissionDialogMessage={'We need your permission to use your camera phone'}
+        onTextRecognized={this.state.textRecognizerEnabled ? this.onTextRecognized : null}
       >
         <View
           style={{
@@ -263,6 +297,30 @@ export default class CameraScreen extends React.Component {
             alignSelf: 'flex-end',
           }}
         >
+          <TouchableOpacity
+            style={[styles.flipButton, { 
+              flex: 0.3, 
+              alignSelf: 'flex-end',
+              backgroundColor: this.state.faceDetectorEnabled ? 'grey' : 'darkred',
+            }]}
+            onPress={this.toggleFaceDetecting.bind(this)}
+          >
+            {
+              <Text style={styles.flipText}>FaceDetection</Text>
+            }
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.flipButton, { 
+              flex: 0.3, 
+              alignSelf: 'flex-end',
+              backgroundColor: this.state.textRecognizerEnabled ? 'grey' : 'darkred',
+            }]}
+            onPress={this.toggleTextDetecting.bind(this)}
+          >
+            {
+              <Text style={styles.flipText}>TextDetection</Text>
+            }
+          </TouchableOpacity>
           <TouchableOpacity
             style={[styles.flipButton, { 
               flex: 0.3, 
@@ -318,9 +376,11 @@ export default class CameraScreen extends React.Component {
             <Text style={styles.flipText}> Gallery </Text>
           </TouchableOpacity>
         </View>
-        {this.renderFaces()}
+        {this.state.faceDetectorEnabled && this.state.faces && this.renderFaces()}
+        {this.state.textRecognizerEnabled && this.state.textBlocks && this.renderTextBlocks()}
         {this.renderLandmarks()}
       </RNCamera>
+    </SafeAreaView>
     );
   }
 
@@ -381,6 +441,21 @@ const styles = StyleSheet.create({
     right: 0,
     left: 0,
     top: 0,
+  },
+  textContainer: {
+    padding: 5,
+    minWidth: 150,
+    minHeight: 150,
+    borderWidth: 1,
+    borderColor: 'grey',
+    backgroundColor: 'white',
+    position: 'absolute',
+    bottom: '25%',
+    right: '1%',
+  },
+  textBlocksText: {
+    color: '#999',
+    fontSize: 8,
   },
   face: {
     padding: 10,

@@ -6,7 +6,7 @@
     "babel": "^6.23.0",
     "react": "16.5.0",
     "react-native": "0.57.1",
-    "react-native-camera": "git+ssh://git@github.com/react-native-community/react-native-camera#fd87a3475aedf64243fc0cc5f225dcbf2484bbab"
+    "react-native-camera": "git+ssh://git@github.com/react-native-community/react-native-camera#d45c2b9"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
@@ -22,6 +22,6 @@
     "clear": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "postinstall": "scripts/post.sh"
+    "postinstall": "cd ios; rm -rf Pods; pod install"
   }
 }
