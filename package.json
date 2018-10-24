@@ -4,9 +4,9 @@
   "dependencies": {
     "@babel/runtime": "^7.1.2",
     "babel": "^6.23.0",
-    "react": "16.5.0",
-    "react-native": "0.57.1",
-    "react-native-camera": "git+ssh://git@github.com/react-native-community/react-native-camera#fd87a3475aedf64243fc0cc5f225dcbf2484bbab"
+    "react": "^16.6.0-alpha.8af6728",
+    "react-native": "0.57.3",
+    "react-native-camera": "git+ssh://git@github.com/react-native-community/react-native-camera#31ab64"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
@@ -22,6 +22,7 @@
     "clear": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
+    "run-android": "react-native run-android",
     "postinstall": "scripts/post.sh"
   }
 }
