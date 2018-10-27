@@ -1,8 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Slider } from 'react-native';
 import { RNCamera } from 'react-native-camera';
-
+import { Dimensions } from 'react-native';
 const landmarkSize = 2;
+const field = 40; // size of View, which check landmark entry
 
 const flashModeOrder = {
   off: 'on',
@@ -10,6 +11,24 @@ const flashModeOrder = {
   auto: 'torch',
   torch: 'off',
 };
+
+// <View
+//   style={{
+//     flex: 0.1,
+//     backgroundColor: 'transparent',
+//     flexDirection: 'row',
+//     alignSelf: 'center',
+//   }}
+// >
+//   <TouchableOpacity
+//     style={[styles.flipButton, styles.picButton, { flex: 0.3, alignSelf: 'flex-end' }]}
+//     onPress={this.takePicture.bind(this)}
+//   >
+//     <Text style={styles.flipText}> SNAP </Text>
+//   </TouchableOpacity>
+// </View>
+
+const {height, width} = Dimensions.get('window');
 
 const wbOrder = {
   auto: 'sunny',
@@ -26,7 +45,7 @@ export default class CameraScreen extends React.Component {
     zoom: 0,
     autoFocus: 'on',
     depth: 0,
-    type: 'back',
+    type: 'front',
     whiteBalance: 'auto',
     ratio: '16:9',
     ratios: [],
@@ -34,6 +53,7 @@ export default class CameraScreen extends React.Component {
     showGallery: false,
     photos: [],
     faces: [],
+    checkView: 40,
     recordOptions: {
       mute: false,
       maxDuration: 5,
@@ -42,28 +62,12 @@ export default class CameraScreen extends React.Component {
     isRecording: false
   };
 
+  ;
+
   getRatios = async function() {
     const ratios = await this.camera.getSupportedRatios();
     return ratios;
   };
-
-  toggleView() {
-    this.setState({
-      showGallery: !this.state.showGallery,
-    });
-  }
-
-  toggleFacing() {
-    this.setState({
-      type: this.state.type === 'back' ? 'front' : 'back',
-    });
-  }
-
-  toggleFlash() {
-    this.setState({
-      flash: flashModeOrder[this.state.flash],
-    });
-  }
 
   setRatio(ratio) {
     this.setState({
@@ -71,37 +75,8 @@ export default class CameraScreen extends React.Component {
     });
   }
 
-  toggleWB() {
-    this.setState({
-      whiteBalance: wbOrder[this.state.whiteBalance],
-    });
-  }
-
-  toggleFocus() {
-    this.setState({
-      autoFocus: this.state.autoFocus === 'on' ? 'off' : 'on',
-    });
-  }
-
-  zoomOut() {
-    this.setState({
-      zoom: this.state.zoom - 0.1 < 0 ? 0 : this.state.zoom - 0.1,
-    });
-  }
-
-  zoomIn() {
-    this.setState({
-      zoom: this.state.zoom + 0.1 > 1 ? 1 : this.state.zoom + 0.1,
-    });
-  }
-
-  setFocusDepth(depth) {
-    this.setState({
-      depth,
-    });
-  }
-
   takePicture = async function() {
+    console.log('12121212');
     if (this.camera) {
       this.camera.takePictureAsync().then(data => {
         console.log('data: ', data);
@@ -109,22 +84,6 @@ export default class CameraScreen extends React.Component {
     }
   };
 
-  takeVideo = async function() {
-    if (this.camera) {
-      try {
-        const promise = this.camera.recordAsync(this.state.recordOptions);
-
-        if (promise) {
-          this.setState({ isRecording: true });
-          const data = await promise;
-          this.setState({ isRecording: false });
-          console.warn(data);
-        }
-      } catch (e) {
-        console.warn(e);
-      }
-    }
-  }
 
   onFacesDetected = ({ faces }) => this.setState({ faces });
   onFaceDetectionError = state => console.warn('Faces detection error:', state);
@@ -154,6 +113,10 @@ export default class CameraScreen extends React.Component {
     );
   }
 
+  makePhoto() {
+    return console.log('323232323');
+  }
+
   renderLandmarksOfFace(face) {
     const renderLandmark = position =>
       position && (
@@ -167,6 +130,48 @@ export default class CameraScreen extends React.Component {
           ]}
         />
       );
+
+    const positionLeftEye = face.leftEyePosition;
+    const positionRightEye = face.rightEyePosition;
+    const positionLeftCheek = face.leftCheekPosition;
+    const positionRightCheek = face.rightCheekPosition;
+    const positionNose = face.noseBasePosition;
+    const positionBottomMouth = face.bottomMouthPosition;
+    const positionLeftMouth = face.leftMouthPosition;
+    const positionRightMouth = face.rightMouthPosition;
+    if (
+      positionLeftEye &&
+      positionRightEye &&
+      positionLeftCheek &&
+      positionRightCheek &&
+      positionNose &&
+      positionBottomMouth &&
+      positionLeftMouth &&
+      positionRightMouth
+    ) {
+      if ((face.leftEyePosition.x <= width/3.5 + field) && (face.leftEyePosition.x >= width/3.5) &&
+         (face.leftEyePosition.y <= height/2.5 + field) && (face.leftEyePosition.y >= height/2.5) &&
+         (face.rightEyePosition.x <= width - width/3.5) && (face.rightEyePosition.x >= width - width/3.5 - field) &&
+         (face.rightEyePosition.y <= height/2.5 + field) && (face.rightEyePosition.y >= height/2.5) &&
+         (face.leftCheekPosition.x <= width/3.7 + field) && (face.leftCheekPosition.x >= width/3.7) &&
+         (face.leftCheekPosition.y <= height/2 + field) && (face.leftCheekPosition.y >= height/2) &&
+         (face.rightCheekPosition.x <= width - width/3.7) && (face.rightCheekPosition.x >= width - width/3.7 - field) &&
+         (face.rightCheekPosition.y <= height/2 + field) && (face.rightCheekPosition.y >= height/2) &&
+         (face.noseBasePosition.x <= width/2 + field * 0.5) && (face.noseBasePosition.x >= width/2 - field * 0.5) &&
+         (face.noseBasePosition.y <= height/1.9 + field) && (face.noseBasePosition.y >= height/1.9) &&
+         (face.bottomMouthPosition.x <= width/2 + field * 0.5) && (face.bottomMouthPosition.x >= width/2 - field * 0.5) &&
+         (face.bottomMouthPosition.y <= height/1.65 + field) && (face.bottomMouthPosition.y >= height/1.65) &&
+         (face.leftMouthPosition.x <= width/2 - 20) && (face.leftMouthPosition.x >= width/2 - 20 - field) &&
+         (face.leftMouthPosition.y <= height/1.75 + field) && (face.leftMouthPosition.y >= height/1.75) &&
+         (face.rightMouthPosition.x <= width - (width/2 - 20) + field) && (face.rightMouthPosition.x >= width - (width/2 - 20)) &&
+         (face.rightMouthPosition.y <= height/1.75 + field) && (face.rightMouthPosition.y >= height/1.75)) {
+           console.log('make a photo')
+           this.camera.takePictureAsync().then(data => {
+             console.log('data: ', data);
+           // this.makePhoto;
+           // this.takePicture();
+         }
+    }
     return (
       <View key={`landmarks-${face.faceID}`}>
         {renderLandmark(face.leftEyePosition)}
@@ -200,6 +205,7 @@ export default class CameraScreen extends React.Component {
     );
   }
 
+
   renderCamera() {
     return (
       <RNCamera
@@ -209,11 +215,8 @@ export default class CameraScreen extends React.Component {
         style={{
           flex: 1,
         }}
-        type={this.state.type}
-        flashMode={this.state.flash}
-        autoFocus={this.state.autoFocus}
-        zoom={this.state.zoom}
-        whiteBalance={this.state.whiteBalance}
+        type={'front'}
+        autoFocus={'on'}
         ratio={this.state.ratio}
         faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks.all}
         onFacesDetected={this.onFacesDetected}
@@ -222,102 +225,31 @@ export default class CameraScreen extends React.Component {
         permissionDialogTitle={'Permission to use camera'}
         permissionDialogMessage={'We need your permission to use your camera phone'}
       >
-        <View
-          style={{
-            flex: 0.5,
-            backgroundColor: 'transparent',
-            flexDirection: 'row',
-            justifyContent: 'space-around',
-          }}
-        >
-          <TouchableOpacity style={styles.flipButton} onPress={this.toggleFacing.bind(this)}>
-            <Text style={styles.flipText}> FLIP </Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.flipButton} onPress={this.toggleFlash.bind(this)}>
-            <Text style={styles.flipText}> FLASH: {this.state.flash} </Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.flipButton} onPress={this.toggleWB.bind(this)}>
-            <Text style={styles.flipText}> WB: {this.state.whiteBalance} </Text>
-          </TouchableOpacity>
-        </View>
-        <View
-          style={{
-            flex: 0.4,
-            backgroundColor: 'transparent',
-            flexDirection: 'row',
-            alignSelf: 'flex-end',
-          }}
-        >
-          <Slider
-            style={{ width: 150, marginTop: 15, alignSelf: 'flex-end' }}
-            onValueChange={this.setFocusDepth.bind(this)}
-            step={0.1}
-            disabled={this.state.autoFocus === 'on'}
-          />
-        </View>
-        <View
-          style={{
-            flex: 0.1,
-            backgroundColor: 'transparent',
-            flexDirection: 'row',
-            alignSelf: 'flex-end',
-          }}
-        >
-          <TouchableOpacity
-            style={[styles.flipButton, { 
-              flex: 0.3, 
-              alignSelf: 'flex-end',
-              backgroundColor: this.state.isRecording ? 'white' : 'darkred',
-            }]}
-            onPress={this.state.isRecording ? () => {} : this.takeVideo.bind(this)}
-          >
-            {
-              this.state.isRecording ?
-              <Text style={styles.flipText}> ☕ </Text>
-              :
-              <Text style={styles.flipText}> REC </Text>
-            }
-          </TouchableOpacity>
-        </View>
-        <View
-          style={{
-            flex: 0.1,
-            backgroundColor: 'transparent',
-            flexDirection: 'row',
-            alignSelf: 'flex-end',
-          }}
-        >
-          <TouchableOpacity
-            style={[styles.flipButton, { flex: 0.1, alignSelf: 'flex-end' }]}
-            onPress={this.zoomIn.bind(this)}
-          >
-            <Text style={styles.flipText}> + </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.flipButton, { flex: 0.1, alignSelf: 'flex-end' }]}
-            onPress={this.zoomOut.bind(this)}
-          >
-            <Text style={styles.flipText}> - </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.flipButton, { flex: 0.25, alignSelf: 'flex-end' }]}
-            onPress={this.toggleFocus.bind(this)}
-          >
-            <Text style={styles.flipText}> AF : {this.state.autoFocus} </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.flipButton, styles.picButton, { flex: 0.3, alignSelf: 'flex-end' }]}
-            onPress={this.takePicture.bind(this)}
-          >
-            <Text style={styles.flipText}> SNAP </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.flipButton, styles.galleryButton, { flex: 0.25, alignSelf: 'flex-end' }]}
-            onPress={this.toggleView.bind(this)}
-          >
-            <Text style={styles.flipText}> Gallery </Text>
-          </TouchableOpacity>
-        </View>
+        <View key='leftEye'
+          style={[styles.checkView, { top: height/2.5, left: width/3.5 }]}
+        />
+        <View key='rightEye'
+          style={[styles.checkView, { top: height/2.5, left: width - width/3.5 - field }]}
+        />
+        <View key='leftCheek'
+          style={[styles.checkView, { top: height/2, left: width/3.7 }]}
+        />
+        <View key='rightCheek'
+          style={[styles.checkView, { top: height/2, left: width - width/3.7 - field }]}
+        />
+        <View key='nose'
+          style={[styles.checkView, { top: height/1.9, left: width/2 - field * 0.5 }]}
+        />
+        <View key='bottmMouth'
+          style={[styles.checkView, { top: height/1.65, left: width/2 - field * 0.5 }]}
+        />
+        <View key='leftMouth'
+          style={[styles.checkView, {  top: height/1.75, left: width/2 - 20 - field}]}
+        />
+        <View key='rightMouth'
+          style={[styles.checkView, {  top: height/1.75, left: width - (width/2 - 20) }]}
+        />
+
         {this.renderFaces()}
         {this.renderLandmarks()}
       </RNCamera>
@@ -389,7 +321,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     borderColor: '#FFD700',
     justifyContent: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(0, 0, 0, 0.2)',
   },
   landmark: {
     width: landmarkSize,
@@ -407,4 +339,12 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
   },
+  checkView: {
+    position: 'absolute',
+    width: 40,
+    height: 40,
+    backgroundColor: 'transparent',
+    borderColor: 'yellow',
+    borderWidth: 1,
+  }
 });
