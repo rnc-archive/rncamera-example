@@ -12,7 +12,6 @@
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		00E356F31AD99517003FC87E /* RNCameraExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNCameraExampleTests.m */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -20,52 +19,10 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2D02E4C21E0B4AEC006451C7 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157351DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
-		2D02E4C31E0B4AEC006451C7 /* libRCTImage-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */; };
-		2D02E4C41E0B4AEC006451C7 /* libRCTLinking-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E881DF850E9000B6D8A /* libRCTLinking-tvOS.a */; };
-		2D02E4C51E0B4AEC006451C7 /* libRCTNetwork-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E8C1DF850E9000B6D8A /* libRCTNetwork-tvOS.a */; };
-		2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E901DF850E9000B6D8A /* libRCTSettings-tvOS.a */; };
-		2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E941DF850E9000B6D8A /* libRCTText-tvOS.a */; };
-		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
-		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
-		2DCD954D1E0B4F2C00145EB5 /* RNCameraExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNCameraExampleTests.m */; };
+		535DDD01E0737B4AC2AB9375 /* libPods-RNCameraExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84771BEFA829165C28B27BDE /* libPods-RNCameraExample.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
-		71169F7C2024F47400B79C53 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71169F7B2024F45100B79C53 /* libRNCamera.a */; };
-		71B587402022584D00B133C7 /* GoogleMobileVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5871A2022584C00B133C7 /* GoogleMobileVision.framework */; };
-		71B587412022584D00B133C7 /* GoogleMobileVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5871A2022584C00B133C7 /* GoogleMobileVision.framework */; };
-		71B587422022584D00B133C7 /* FaceDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5871E2022584C00B133C7 /* FaceDetector.framework */; };
-		71B587432022584D00B133C7 /* FaceDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5871E2022584C00B133C7 /* FaceDetector.framework */; };
-		71B587442022584D00B133C7 /* BCLjoy_100.emd in Resources */ = {isa = PBXBuildFile; fileRef = 71B587202022584C00B133C7 /* BCLjoy_100.emd */; };
-		71B587452022584D00B133C7 /* BCLjoy_100.emd in Resources */ = {isa = PBXBuildFile; fileRef = 71B587202022584C00B133C7 /* BCLjoy_100.emd */; };
-		71B587462022584D00B133C7 /* BCLlefteyeclosed_200.emd in Resources */ = {isa = PBXBuildFile; fileRef = 71B587212022584C00B133C7 /* BCLlefteyeclosed_200.emd */; };
-		71B587472022584D00B133C7 /* BCLlefteyeclosed_200.emd in Resources */ = {isa = PBXBuildFile; fileRef = 71B587212022584C00B133C7 /* BCLlefteyeclosed_200.emd */; };
-		71B587482022584D00B133C7 /* BCLrighteyeclosed_200.emd in Resources */ = {isa = PBXBuildFile; fileRef = 71B587222022584C00B133C7 /* BCLrighteyeclosed_200.emd */; };
-		71B587492022584D00B133C7 /* BCLrighteyeclosed_200.emd in Resources */ = {isa = PBXBuildFile; fileRef = 71B587222022584C00B133C7 /* BCLrighteyeclosed_200.emd */; };
-		71B5874A2022584D00B133C7 /* LMprec_600.emd in Resources */ = {isa = PBXBuildFile; fileRef = 71B587232022584C00B133C7 /* LMprec_600.emd */; };
-		71B5874B2022584D00B133C7 /* LMprec_600.emd in Resources */ = {isa = PBXBuildFile; fileRef = 71B587232022584C00B133C7 /* LMprec_600.emd */; };
-		71B5874C2022584D00B133C7 /* MFTprec_202.emd in Resources */ = {isa = PBXBuildFile; fileRef = 71B587242022584C00B133C7 /* MFTprec_202.emd */; };
-		71B5874D2022584D00B133C7 /* MFTprec_202.emd in Resources */ = {isa = PBXBuildFile; fileRef = 71B587242022584C00B133C7 /* MFTprec_202.emd */; };
-		71B5874E2022584D00B133C7 /* PFFprec_702.emd in Resources */ = {isa = PBXBuildFile; fileRef = 71B587252022584C00B133C7 /* PFFprec_702.emd */; };
-		71B5874F2022584D00B133C7 /* PFFprec_702.emd in Resources */ = {isa = PBXBuildFile; fileRef = 71B587252022584C00B133C7 /* PFFprec_702.emd */; };
-		71B587522022584D00B133C7 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5872A2022584C00B133C7 /* GoogleUtilities.framework */; };
-		71B587532022584D00B133C7 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5872A2022584C00B133C7 /* GoogleUtilities.framework */; };
-		71B587562022584D00B133C7 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5872F2022584C00B133C7 /* GoogleInterchangeUtilities.framework */; };
-		71B587572022584D00B133C7 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5872F2022584C00B133C7 /* GoogleInterchangeUtilities.framework */; };
-		71B5875A2022584D00B133C7 /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B587342022584C00B133C7 /* GoogleNetworkingUtilities.framework */; };
-		71B5875B2022584D00B133C7 /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B587342022584C00B133C7 /* GoogleNetworkingUtilities.framework */; };
-		71B5875C2022584D00B133C7 /* dummy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 71B587362022584C00B133C7 /* dummy.txt */; };
-		71B5875D2022584D00B133C7 /* dummy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 71B587362022584C00B133C7 /* dummy.txt */; };
-		71B5875E2022584D00B133C7 /* GoogleMVDataOutput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B587392022584C00B133C7 /* GoogleMVDataOutput.framework */; };
-		71B5875F2022584D00B133C7 /* GoogleMVDataOutput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B587392022584C00B133C7 /* GoogleMVDataOutput.framework */; };
-		71B587622022584D00B133C7 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5873D2022584C00B133C7 /* GoogleSymbolUtilities.framework */; };
-		71B587632022584D00B133C7 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5873D2022584C00B133C7 /* GoogleSymbolUtilities.framework */; };
 		71B587652022585800B133C7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B587642022585700B133C7 /* AddressBook.framework */; };
-		71B587662022585C00B133C7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B587642022585700B133C7 /* AddressBook.framework */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 /* End PBXBuildFile section */
@@ -106,13 +63,6 @@
 			remoteGlobalIDString = 832C81801AAF6DEF007FA2F7;
 			remoteInfo = RCTVibration;
 		};
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = RNCameraExample;
-		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
@@ -147,13 +97,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = EBF21BFA1FC4989A0052F4D5;
 			remoteInfo = "jsinspector-tvOS";
-		};
-		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "RNCameraExample-tvOS";
 		};
 		3DAD3E831DF850E9000B6D8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -360,7 +303,6 @@
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
 		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* RNCameraExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNCameraExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RNCameraExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNCameraExampleTests.m; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
@@ -373,100 +315,37 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNCameraExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNCameraExample/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* RNCameraExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNCameraExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* RNCameraExample-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNCameraExample-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E1FE258118D31DC3D0AE09 /* Pods-RNCameraExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCameraExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNCameraExample/Pods-RNCameraExample.debug.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		71169F762024F45100B79C53 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; };
-		71B587172022584C00B133C7 /* dummy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummy.txt; sourceTree = "<group>"; };
-		71B5871A2022584C00B133C7 /* GoogleMobileVision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileVision.framework; sourceTree = "<group>"; };
-		71B5871E2022584C00B133C7 /* FaceDetector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaceDetector.framework; sourceTree = "<group>"; };
-		71B587202022584C00B133C7 /* BCLjoy_100.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = BCLjoy_100.emd; sourceTree = "<group>"; };
-		71B587212022584C00B133C7 /* BCLlefteyeclosed_200.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = BCLlefteyeclosed_200.emd; sourceTree = "<group>"; };
-		71B587222022584C00B133C7 /* BCLrighteyeclosed_200.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = BCLrighteyeclosed_200.emd; sourceTree = "<group>"; };
-		71B587232022584C00B133C7 /* LMprec_600.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = LMprec_600.emd; sourceTree = "<group>"; };
-		71B587242022584C00B133C7 /* MFTprec_202.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = MFTprec_202.emd; sourceTree = "<group>"; };
-		71B587252022584C00B133C7 /* PFFprec_702.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = PFFprec_702.emd; sourceTree = "<group>"; };
-		71B587272022584C00B133C7 /* dummy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummy.txt; sourceTree = "<group>"; };
-		71B5872A2022584C00B133C7 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
-		71B5872C2022584C00B133C7 /* dummy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummy.txt; sourceTree = "<group>"; };
-		71B5872F2022584C00B133C7 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		71B587312022584C00B133C7 /* dummy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummy.txt; sourceTree = "<group>"; };
-		71B587342022584C00B133C7 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
-		71B587362022584C00B133C7 /* dummy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummy.txt; sourceTree = "<group>"; };
-		71B587392022584C00B133C7 /* GoogleMVDataOutput.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMVDataOutput.framework; sourceTree = "<group>"; };
-		71B5873B2022584C00B133C7 /* dummy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummy.txt; sourceTree = "<group>"; };
-		71B5873D2022584C00B133C7 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		71B587642022585700B133C7 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		84771BEFA829165C28B27BDE /* libPods-RNCameraExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNCameraExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		DFAD70AE03AA7E9F5CBE272D /* Pods-RNCameraExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCameraExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNCameraExample/Pods-RNCameraExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00E356EB1AD99517003FC87E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				71B587662022585C00B133C7 /* AddressBook.framework in Frameworks */,
-				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
-				71B587432022584D00B133C7 /* FaceDetector.framework in Frameworks */,
-				71B587632022584D00B133C7 /* GoogleSymbolUtilities.framework in Frameworks */,
-				71B587532022584D00B133C7 /* GoogleUtilities.framework in Frameworks */,
-				71B587412022584D00B133C7 /* GoogleMobileVision.framework in Frameworks */,
-				71B5875F2022584D00B133C7 /* GoogleMVDataOutput.framework in Frameworks */,
-				71B5875B2022584D00B133C7 /* GoogleNetworkingUtilities.framework in Frameworks */,
-				71B587572022584D00B133C7 /* GoogleInterchangeUtilities.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71169F7C2024F47400B79C53 /* libRNCamera.a in Frameworks */,
 				71B587652022585800B133C7 /* AddressBook.framework in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
-				71B587402022584D00B133C7 /* GoogleMobileVision.framework in Frameworks */,
-				71B587622022584D00B133C7 /* GoogleSymbolUtilities.framework in Frameworks */,
-				71B5875E2022584D00B133C7 /* GoogleMVDataOutput.framework in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
-				71B5875A2022584D00B133C7 /* GoogleNetworkingUtilities.framework in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
-				71B587562022584D00B133C7 /* GoogleInterchangeUtilities.framework in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
-				71B587422022584D00B133C7 /* FaceDetector.framework in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
-				71B587522022584D00B133C7 /* GoogleUtilities.framework in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2D02E4781E0B4A5D006451C7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */,
-				2D02E4C21E0B4AEC006451C7 /* libRCTAnimation.a in Frameworks */,
-				2D02E4C31E0B4AEC006451C7 /* libRCTImage-tvOS.a in Frameworks */,
-				2D02E4C41E0B4AEC006451C7 /* libRCTLinking-tvOS.a in Frameworks */,
-				2D02E4C51E0B4AEC006451C7 /* libRCTNetwork-tvOS.a in Frameworks */,
-				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
-				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
-				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2D02E48D1E0B4A5D006451C7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				535DDD01E0737B4AC2AB9375 /* libPods-RNCameraExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +468,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		2483E4BEEF7DA0594396DDF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18E1FE258118D31DC3D0AE09 /* Pods-RNCameraExample.debug.xcconfig */,
+				DFAD70AE03AA7E9F5CBE272D /* Pods-RNCameraExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -606,197 +494,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		71B587162022584C00B133C7 /* Detector */ = {
-			isa = PBXGroup;
-			children = (
-				71B587172022584C00B133C7 /* dummy.txt */,
-				71B587182022584C00B133C7 /* Frameworks */,
-			);
-			path = Detector;
-			sourceTree = "<group>";
-		};
-		71B587182022584C00B133C7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				71B587192022584C00B133C7 /* frameworks */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		71B587192022584C00B133C7 /* frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				71B5871A2022584C00B133C7 /* GoogleMobileVision.framework */,
-			);
-			path = frameworks;
-			sourceTree = "<group>";
-		};
-		71B5871B2022584C00B133C7 /* FaceDetector */ = {
-			isa = PBXGroup;
-			children = (
-				71B5871C2022584C00B133C7 /* Frameworks */,
-				71B5871F2022584C00B133C7 /* Resources */,
-			);
-			path = FaceDetector;
-			sourceTree = "<group>";
-		};
-		71B5871C2022584C00B133C7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				71B5871D2022584C00B133C7 /* frameworks */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		71B5871D2022584C00B133C7 /* frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				71B5871E2022584C00B133C7 /* FaceDetector.framework */,
-			);
-			path = frameworks;
-			sourceTree = "<group>";
-		};
-		71B5871F2022584C00B133C7 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				71B587202022584C00B133C7 /* BCLjoy_100.emd */,
-				71B587212022584C00B133C7 /* BCLlefteyeclosed_200.emd */,
-				71B587222022584C00B133C7 /* BCLrighteyeclosed_200.emd */,
-				71B587232022584C00B133C7 /* LMprec_600.emd */,
-				71B587242022584C00B133C7 /* MFTprec_202.emd */,
-				71B587252022584C00B133C7 /* PFFprec_702.emd */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		71B587262022584C00B133C7 /* GoogleUtilities-1.3.2 */ = {
-			isa = PBXGroup;
-			children = (
-				71B587272022584C00B133C7 /* dummy.txt */,
-				71B587282022584C00B133C7 /* Frameworks */,
-			);
-			path = "GoogleUtilities-1.3.2";
-			sourceTree = "<group>";
-		};
-		71B587282022584C00B133C7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				71B587292022584C00B133C7 /* frameworks */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		71B587292022584C00B133C7 /* frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				71B5872A2022584C00B133C7 /* GoogleUtilities.framework */,
-			);
-			path = frameworks;
-			sourceTree = "<group>";
-		};
-		71B5872B2022584C00B133C7 /* GoogleInterchangeUtilities-1.2.2 */ = {
-			isa = PBXGroup;
-			children = (
-				71B5872C2022584C00B133C7 /* dummy.txt */,
-				71B5872D2022584C00B133C7 /* Frameworks */,
-			);
-			path = "GoogleInterchangeUtilities-1.2.2";
-			sourceTree = "<group>";
-		};
-		71B5872D2022584C00B133C7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				71B5872E2022584C00B133C7 /* frameworks */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		71B5872E2022584C00B133C7 /* frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				71B5872F2022584C00B133C7 /* GoogleInterchangeUtilities.framework */,
-			);
-			path = frameworks;
-			sourceTree = "<group>";
-		};
-		71B587302022584C00B133C7 /* GoogleNetworkingUtilities-1.2.2 */ = {
-			isa = PBXGroup;
-			children = (
-				71B587312022584C00B133C7 /* dummy.txt */,
-				71B587322022584C00B133C7 /* Frameworks */,
-			);
-			path = "GoogleNetworkingUtilities-1.2.2";
-			sourceTree = "<group>";
-		};
-		71B587322022584C00B133C7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				71B587332022584C00B133C7 /* frameworks */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		71B587332022584C00B133C7 /* frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				71B587342022584C00B133C7 /* GoogleNetworkingUtilities.framework */,
-			);
-			path = frameworks;
-			sourceTree = "<group>";
-		};
-		71B587352022584C00B133C7 /* MVDataOutput */ = {
-			isa = PBXGroup;
-			children = (
-				71B587362022584C00B133C7 /* dummy.txt */,
-				71B587372022584C00B133C7 /* Frameworks */,
-			);
-			path = MVDataOutput;
-			sourceTree = "<group>";
-		};
-		71B587372022584C00B133C7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				71B587382022584C00B133C7 /* frameworks */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		71B587382022584C00B133C7 /* frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				71B587392022584C00B133C7 /* GoogleMVDataOutput.framework */,
-			);
-			path = frameworks;
-			sourceTree = "<group>";
-		};
-		71B5873A2022584C00B133C7 /* GoogleSymbolUtilities-1.1.1 */ = {
-			isa = PBXGroup;
-			children = (
-				71B5873B2022584C00B133C7 /* dummy.txt */,
-				71B5873C2022584C00B133C7 /* Frameworks */,
-			);
-			path = "GoogleSymbolUtilities-1.1.1";
-			sourceTree = "<group>";
-		};
-		71B5873C2022584C00B133C7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				71B5873D2022584C00B133C7 /* GoogleSymbolUtilities.framework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		71E0ECC620179EE100791E5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				71B587642022585700B133C7 /* AddressBook.framework */,
-				71B587162022584C00B133C7 /* Detector */,
-				71B5871B2022584C00B133C7 /* FaceDetector */,
-				71B5872B2022584C00B133C7 /* GoogleInterchangeUtilities-1.2.2 */,
-				71B587302022584C00B133C7 /* GoogleNetworkingUtilities-1.2.2 */,
-				71B5873A2022584C00B133C7 /* GoogleSymbolUtilities-1.1.1 */,
-				71B587262022584C00B133C7 /* GoogleUtilities-1.3.2 */,
-				71B587352022584C00B133C7 /* MVDataOutput */,
+				84771BEFA829165C28B27BDE /* libPods-RNCameraExample.a */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -847,6 +549,7 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RNCameraExampleTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				2483E4BEEF7DA0594396DDF5 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -857,9 +560,6 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* RNCameraExample.app */,
-				00E356EE1AD99517003FC87E /* RNCameraExampleTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* RNCameraExample-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* RNCameraExample-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -876,32 +576,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* RNCameraExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "RNCameraExampleTests" */;
-			buildPhases = (
-				00E356EA1AD99517003FC87E /* Sources */,
-				00E356EB1AD99517003FC87E /* Frameworks */,
-				00E356EC1AD99517003FC87E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00E356F51AD99517003FC87E /* PBXTargetDependency */,
-			);
-			name = RNCameraExampleTests;
-			productName = RNCameraExampleTests;
-			productReference = 00E356EE1AD99517003FC87E /* RNCameraExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		13B07F861A680F5B00A75B9A /* RNCameraExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RNCameraExample" */;
 			buildPhases = (
+				37A701C7BEECFD36DFAA6196 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				D3606F3AA4A90993417571BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -912,42 +596,6 @@
 			productReference = 13B07F961A680F5B00A75B9A /* RNCameraExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* RNCameraExample-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "RNCameraExample-tvOS" */;
-			buildPhases = (
-				2D02E4771E0B4A5D006451C7 /* Sources */,
-				2D02E4781E0B4A5D006451C7 /* Frameworks */,
-				2D02E4791E0B4A5D006451C7 /* Resources */,
-				2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "RNCameraExample-tvOS";
-			productName = "RNCameraExample-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* RNCameraExample-tvOS.app */;
-			productType = "com.apple.product-type.application";
-		};
-		2D02E48F1E0B4A5D006451C7 /* RNCameraExample-tvOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "RNCameraExample-tvOSTests" */;
-			buildPhases = (
-				2D02E48C1E0B4A5D006451C7 /* Sources */,
-				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
-				2D02E48E1E0B4A5D006451C7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
-			);
-			name = "RNCameraExample-tvOSTests";
-			productName = "RNCameraExample-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* RNCameraExample-tvOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -957,23 +605,8 @@
 				LastUpgradeCheck = 610;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
-					00E356ED1AD99517003FC87E = {
-						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = PEG44W5TBT;
-						TestTargetID = 13B07F861A680F5B00A75B9A;
-					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = PEG44W5TBT;
-						ProvisioningStyle = Automatic;
-					};
-					2D02E47A1E0B4A5D006451C7 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-					};
-					2D02E48F1E0B4A5D006451C7 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 2D02E47A1E0B4A5D006451C7;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -1045,9 +678,6 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* RNCameraExample */,
-				00E356ED1AD99517003FC87E /* RNCameraExampleTests */,
-				2D02E47A1E0B4A5D006451C7 /* RNCameraExample-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* RNCameraExample-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1322,48 +952,12 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				71B5874B2022584D00B133C7 /* LMprec_600.emd in Resources */,
-				71B5874D2022584D00B133C7 /* MFTprec_202.emd in Resources */,
-				71B587472022584D00B133C7 /* BCLlefteyeclosed_200.emd in Resources */,
-				71B587492022584D00B133C7 /* BCLrighteyeclosed_200.emd in Resources */,
-				71B5874F2022584D00B133C7 /* PFFprec_702.emd in Resources */,
-				71B5875D2022584D00B133C7 /* dummy.txt in Resources */,
-				71B587452022584D00B133C7 /* BCLjoy_100.emd in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				71B587442022584D00B133C7 /* BCLjoy_100.emd in Resources */,
-				71B587482022584D00B133C7 /* BCLrighteyeclosed_200.emd in Resources */,
-				71B5874E2022584D00B133C7 /* PFFprec_702.emd in Resources */,
-				71B5874A2022584D00B133C7 /* LMprec_600.emd in Resources */,
-				71B587462022584D00B133C7 /* BCLlefteyeclosed_200.emd in Resources */,
-				71B5875C2022584D00B133C7 /* dummy.txt in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				71B5874C2022584D00B133C7 /* MFTprec_202.emd in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2D02E4791E0B4A5D006451C7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2D02E48E1E0B4A5D006451C7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1384,31 +978,55 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+		37A701C7BEECFD36DFAA6196 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Bundle React Native Code And Images";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNCameraExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3606F3AA4A90993417571BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RNCameraExample/Pods-RNCameraExample-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVFaceDetectorResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVTextDetectorResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVFaceDetectorResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVTextDetectorResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RNCameraExample/Pods-RNCameraExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00E356EA1AD99517003FC87E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00E356F31AD99517003FC87E /* RNCameraExampleTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F871A680F5B00A75B9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1418,37 +1036,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D02E4771E0B4A5D006451C7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */,
-				2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2D02E48C1E0B4A5D006451C7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2DCD954D1E0B4F2C00145EB5 /* RNCameraExampleTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* RNCameraExample */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
-		};
-		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* RNCameraExample-tvOS */;
-			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
@@ -1463,92 +1051,16 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		00E356F61AD99517003FC87E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = PEG44W5TBT;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks/Detector/Frameworks/frameworks",
-					"$(PROJECT_DIR)/Frameworks/FaceDetector/Frameworks/frameworks",
-					"$(PROJECT_DIR)/Frameworks/GoogleUtilities-1.3.2/Frameworks/frameworks",
-					"$(PROJECT_DIR)/Frameworks/GoogleInterchangeUtilities-1.2.2/Frameworks/frameworks",
-					"$(PROJECT_DIR)/Frameworks/GoogleNetworkingUtilities-1.2.2/Frameworks/frameworks",
-					"$(PROJECT_DIR)/Frameworks/MVDataOutput/Frameworks/frameworks",
-					"$(PROJECT_DIR)/Frameworks/GoogleSymbolUtilities-1.1.1/Frameworks",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
-				);
-				INFOPLIST_FILE = RNCameraExampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"-lz",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNCameraExample.app/RNCameraExample";
-			};
-			name = Debug;
-		};
-		00E356F71AD99517003FC87E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = PEG44W5TBT;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks/Detector/Frameworks/frameworks",
-					"$(PROJECT_DIR)/Frameworks/FaceDetector/Frameworks/frameworks",
-					"$(PROJECT_DIR)/Frameworks/GoogleUtilities-1.3.2/Frameworks/frameworks",
-					"$(PROJECT_DIR)/Frameworks/GoogleInterchangeUtilities-1.2.2/Frameworks/frameworks",
-					"$(PROJECT_DIR)/Frameworks/GoogleNetworkingUtilities-1.2.2/Frameworks/frameworks",
-					"$(PROJECT_DIR)/Frameworks/MVDataOutput/Frameworks/frameworks",
-					"$(PROJECT_DIR)/Frameworks/GoogleSymbolUtilities-1.1.1/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
-				);
-				INFOPLIST_FILE = RNCameraExampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"-lz",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNCameraExample.app/RNCameraExample";
-			};
-			name = Release;
-		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18E1FE258118D31DC3D0AE09 /* Pods-RNCameraExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = PEG44W5TBT;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/Detector/Frameworks/frameworks",
@@ -1571,6 +1083,7 @@
 					"-lc++",
 					"-lz",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.RNCameraExample;
 				PRODUCT_NAME = RNCameraExample;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1579,12 +1092,13 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFAD70AE03AA7E9F5CBE272D /* Pods-RNCameraExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PEG44W5TBT;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/Detector/Frameworks/frameworks",
@@ -1607,127 +1121,10 @@
 					"-lc++",
 					"-lz",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.RNCameraExample;
 				PRODUCT_NAME = RNCameraExample;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Release;
-		};
-		2D02E4971E0B4A5E006451C7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_TESTABILITY = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
-				);
-				INFOPLIST_FILE = "RNCameraExample-tvOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.RNCameraExample-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
-			};
-			name = Debug;
-		};
-		2D02E4981E0B4A5E006451C7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
-				);
-				INFOPLIST_FILE = "RNCameraExample-tvOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.RNCameraExample-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
-			};
-			name = Release;
-		};
-		2D02E4991E0B4A5E006451C7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_TESTABILITY = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "RNCameraExample-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.RNCameraExample-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNCameraExample-tvOS.app/RNCameraExample-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 10.1;
-			};
-			name = Debug;
-		};
-		2D02E49A1E0B4A5E006451C7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "RNCameraExample-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.RNCameraExample-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNCameraExample-tvOS.app/RNCameraExample-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
 		};
@@ -1810,38 +1207,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "RNCameraExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00E356F61AD99517003FC87E /* Debug */,
-				00E356F71AD99517003FC87E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RNCameraExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "RNCameraExample-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2D02E4971E0B4A5E006451C7 /* Debug */,
-				2D02E4981E0B4A5E006451C7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "RNCameraExample-tvOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2D02E4991E0B4A5E006451C7 /* Debug */,
-				2D02E49A1E0B4A5E006451C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
